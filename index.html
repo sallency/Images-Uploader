@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Images Uploader</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/uploader.css">
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">Images Uploader</h3>
+        <form action="uploader.php" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- 图片组容器 -->
+                    <div class="prev_container" id="container">
+                        <!-- 添加按钮 -->
+                        <div class="prev_add">
+                            <div class="prev" id="upload"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <!-- 提交表单 -->
+                    <input type="submit" class="btn btn-success" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/uploader.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            /**
+             * 组图容器ID
+             * 添加图片按钮ID
+             * 表单的键名
+             * 图片大小限制
+             * 图片数量限制
+             * 图片类型限制
+             */
+            FileUploader.createUploader("container", "upload", 'poster', 2000, 10);
+        })
+    </script>
+</body>
+</html>
