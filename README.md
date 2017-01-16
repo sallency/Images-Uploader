@@ -11,6 +11,7 @@ a simple images uploader with preview
 </div>
 
 import js/uploader.js after jquery library
+-----------------------------------------------
 
 //container_id add_button_id key_name single_image_max_size max_count image_type_limit
 FileUploader.createUploader("container", "upload", 'poster', 2000, 10);
